@@ -9,5 +9,5 @@ package modelo;
  * @author USER
  */
 public interface IAccionCombate {
-  
+    String ejecutarAccionCombate();
 }
