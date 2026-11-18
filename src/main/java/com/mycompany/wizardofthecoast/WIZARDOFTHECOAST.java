@@ -3,7 +3,9 @@
  */
 
 package com.mycompany.wizardofthecoast;
-
+import controlador.ControladorGremio;
+import javax.swing.SwingUtilities;
+import vista.VentanaGremioForm;
 /**
  *
  * @author USER
@@ -11,6 +13,15 @@ package com.mycompany.wizardofthecoast;
 public class WIZARDOFTHECOAST {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        SwingUtilities.invokeLater(() -> {
+
+            ControladorGremio controlador = new ControladorGremio();
+
+            VentanaGremioForm ventana = new VentanaGremioForm(controlador);
+
+            ventana.setLocationRelativeTo(null);
+            ventana.setVisible(true);
+
+        });
     }
 }
